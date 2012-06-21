@@ -26,12 +26,13 @@ Vagrant::Config.run do |config|
     end
   end
 
-  config.vm.define :database do |base|
-    base.vm.box = "base"
+  config.vm.define :database do |database|
+    database.vm.box = "lucid32"
+    database.vm.box_url = "http://files.vagrantup.com/lucid32.box"
 
-    base.vm.network :hostonly, "33.33.33.11"
+    database.vm.network :hostonly, "33.33.33.11"
 
-    base.vm.provision :puppet do |puppet|
+    database.vm.provision :puppet do |puppet|
       puppet.manifests_path = "puppet/manifests"
       puppet.manifest_file  = "database.pp"
       puppet.module_path = "puppet/modules"
@@ -40,12 +41,13 @@ Vagrant::Config.run do |config|
     end
   end
 
-  config.vm.define :application do |base|
-    base.vm.box = "base"
+  config.vm.define :application do |application|
+    application.vm.box = "lucid32"
+    application.vm.box_url = "http://files.vagrantup.com/lucid32.box"
 
-    base.vm.network :hostonly, "33.33.33.12"
+    application.vm.network :hostonly, "33.33.33.12"
 
-    base.vm.provision :puppet do |puppet|
+    application.vm.provision :puppet do |puppet|
       puppet.manifests_path = "puppet/manifests"
       puppet.manifest_file  = "application.pp"
       puppet.module_path = "puppet/modules"
