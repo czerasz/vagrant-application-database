@@ -1,6 +1,6 @@
 class boxes::application () {
 	class { "boxes::base":
-		name => "application",
+		vm_name => "application",
 	}
 }
 

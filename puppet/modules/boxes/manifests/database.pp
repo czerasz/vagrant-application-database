@@ -1,5 +1,5 @@
 class boxes::database () {
 	class { "boxes::base":
-		name => "database",
+		vm_name => "database",
 	}
 }
