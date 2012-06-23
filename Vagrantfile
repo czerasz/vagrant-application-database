@@ -6,9 +6,6 @@ Vagrant::Config.run do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  # Every Vagrant virtual environment requires a box to build off of.
-  # config.vm.box = "base"
-
   config.vm.define :base do |base|
     base.vm.box = "lucid32"
     base.vm.box_url = "http://files.vagrantup.com/lucid32.box"

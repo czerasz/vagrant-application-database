@@ -1,0 +1,11 @@
+server {
+  error_log debug;
+
+  listen 80;
+  server_name default_server;
+
+  location /<%= project_name %>/ {
+    alias <%= project_path %>/;
+    index index.html;
+  }
+}
