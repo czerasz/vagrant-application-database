@@ -17,7 +17,7 @@ Then use `vagrant up application` to create the application VM.
 ##Known issues
 
 There is an issue with the nginx module which I described [here](https://github.com/jfryman/puppet-nginx/issues/3).
-This project uses the nginx puppet module as a git submodule. The git submodule is a [fork](https://github.com/czerasz/puppet-nginx/tree/iss3) of the orginal project which takes care of this issue.
+This project uses the nginx puppet module as a git submodule. The git submodule is a [fork](https://github.com/czerasz/puppet-nginx/tree/iss3) of the orginal project and it takes care of this issue.
 
 ##Used resources
 * [nginx configuration](http://krisjordan.com/essays/goodbye-server-configuration-woes-hello-puppet)
