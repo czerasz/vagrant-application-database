@@ -29,6 +29,10 @@ Vagrant::Config.run do |config|
 
     database.vm.network :hostonly, "33.33.33.11"
 
+    database.hiera.config_path = './puppet/hiera'
+    database.hiera.config_file = 'hiera.yaml'
+    database.hiera.data_path   = './puppet/hiera/hieradata'
+
     database.vm.provision :puppet do |puppet|
       puppet.manifests_path = "puppet/manifests"
       puppet.manifest_file  = "database.pp"
