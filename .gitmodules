@@ -4,3 +4,6 @@
 [submodule "puppet/modules/nginx"]
 	path = puppet/modules/nginx
 	url = git://github.com/czerasz/puppet-nginx.git
+[submodule "puppet/modules/hiera"]
+	path = puppet/modules/hiera
+	url = git://github.com/puppetlabs/hiera-puppet.git
