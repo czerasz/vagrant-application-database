@@ -1,1 +1,1 @@
-include boxes::database
+include boxes::db
