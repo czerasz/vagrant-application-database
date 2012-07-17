@@ -3,7 +3,5 @@ class boxes::db () {
 		vm_name => "database",
 	}
 
-	class { "database": }
-
-	# 	Class["boxes::base"] -> Class["database"]
+	include database
 }

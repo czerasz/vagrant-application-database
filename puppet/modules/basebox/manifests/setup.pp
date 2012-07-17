@@ -13,6 +13,12 @@ class basebox::setup (
 	  replace => true,
 	}
 
+file { "/etc/hostname":
+  content => "${vm_name}",
+  ensure  => file,
+  replace => true,
+}
+
 	if ($operatingsystem == "Ubuntu") and ($operatingsystemrelease == 10.04) {
 		exec { "fix locale bug": 
 			command => "echo 'LC_ALL=\"en_GB.UTF-8\"' >> /etc/default/locale"

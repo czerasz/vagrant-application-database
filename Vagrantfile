@@ -23,7 +23,7 @@ Vagrant::Config.run do |config|
     end
   end
 
-  config.vm.define :database do |database|
+  config.vm.define :db do |database|
     database.vm.box = "lucid32"
     database.vm.box_url = "http://files.vagrantup.com/lucid32.box"
 
@@ -31,14 +31,14 @@ Vagrant::Config.run do |config|
 
     database.vm.provision :puppet do |puppet|
       puppet.manifests_path = "puppet/manifests"
-      puppet.manifest_file  = "database.pp"
+      puppet.manifest_file  = "db.pp"
       puppet.module_path = "puppet/modules"
 
       puppet.options = "--verbose --debug"
     end
   end
 
-  config.vm.define :application do |application|
+  config.vm.define :app do |application|
     application.vm.box = "lucid32"
     application.vm.box_url = "http://files.vagrantup.com/lucid32.box"
 
@@ -46,7 +46,7 @@ Vagrant::Config.run do |config|
 
     application.vm.provision :puppet do |puppet|
       puppet.manifests_path = "puppet/manifests"
-      puppet.manifest_file  = "application.pp"
+      puppet.manifest_file  = "app.pp"
       puppet.module_path = "puppet/modules"
 
       puppet.options = "--verbose --debug"
