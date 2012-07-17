@@ -24,7 +24,7 @@ GEM
       log4r (~> 1.1.9)
       net-scp (~> 1.0.4)
       net-ssh (~> 2.2.2)
-    vagrant-hiera (0.2.1)
+    vagrant-hiera (0.3.2)
 
 PLATFORMS
   ruby
@@ -32,4 +32,4 @@ PLATFORMS
 DEPENDENCIES
   hiera-puppet
   vagrant
-  vagrant-hiera
+  vagrant-hiera (~> 0.3.2)
