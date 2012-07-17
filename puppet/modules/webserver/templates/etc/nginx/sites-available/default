@@ -1,5 +1,5 @@
 server {
-  error_log debug;
+  error_log /var/log/nginx/<%= project_name %>.error.log debug;
 
   listen 80;
   server_name default_server;
